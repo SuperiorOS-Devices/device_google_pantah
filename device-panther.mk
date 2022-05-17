@@ -348,3 +348,7 @@ PRODUCT_COPY_FILES += \
 # Enable adpf cpu hint session for SurfaceFlinger
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     debug.sf.enable_adpf_cpu_hint=true
+
+# HBM
+PRODUCT_PACKAGES += \
+    HbmSVManagerOverlay
