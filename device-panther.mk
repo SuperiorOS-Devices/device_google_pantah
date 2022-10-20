@@ -352,4 +352,4 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 # HBM
 PRODUCT_PACKAGES += \
-    HbmSVManagerOverlay
+    HbmSVManagerOverlayPanther
