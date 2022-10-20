@@ -304,4 +304,4 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 # HBM
 PRODUCT_PACKAGES += \
-    HbmSVManagerOverlay
+    HbmSVManagerOverlayPanther
