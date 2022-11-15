@@ -34,6 +34,7 @@ product/priv-app/HotwordEnrollmentXGoogleFUSIONPro/HotwordEnrollmentXGoogleFUSIO
 product/etc/sysconfig/allowlist_com.shannon.imsservice.xml
 
 # Permissions
+product/etc/permissions/android.hardware.biometrics.face.xml
 product/etc/permissions/privapp-permissions-google-p.xml
 product/etc/sysconfig/google-hiddenapi-package-whitelist.xml
 product/etc/sysconfig/nexus.xml
@@ -254,6 +255,9 @@ system_ext/etc/init/vendor.google.edgetpu_app_service@1.0-service.rc
 system_ext/etc/vintf/manifest/vendor.google.edgetpu_app_service@1.0-service.xml
 system_ext/lib64/com.google.edgetpu_app_service-V2-ndk.so
 system_ext/lib64/com.google.edgetpu_vendor_service-V2-ndk.so
+
+# Faceunlock
+system_ext/priv-app/SettingsGoogleFutureFaceEnroll/SettingsGoogleFutureFaceEnroll.apk
 
 # HBM
 system_ext/lib64/libhbmsvmanager_jni.so
