@@ -36,7 +36,9 @@ product/etc/sysconfig/allowlist_com.shannon.imsservice.xml
 # Permissions
 product/etc/permissions/android.hardware.biometrics.face.xml
 product/etc/permissions/privapp-permissions-google-p.xml
+product/etc/sysconfig/adaptivecharging.xml
 product/etc/sysconfig/google-hiddenapi-package-whitelist.xml
+product/etc/sysconfig/quick_tap.xml
 product/etc/sysconfig/nexus.xml
 product/etc/sysconfig/pixel_experience_2017.xml
 product/etc/sysconfig/pixel_experience_2018.xml
