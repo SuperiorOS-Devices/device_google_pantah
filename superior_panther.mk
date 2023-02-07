@@ -13,9 +13,9 @@ PRODUCT_BRAND := google
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_PRODUCT=panther \
-    PRIVATE_BUILD_DESC="panther-user 13 TQ1A.230105.001.A2 9325585 release-keys"
+    PRIVATE_BUILD_DESC="panther-user 13 TQ1A.230205.002 9471150 release-keys"
 
-BUILD_FINGERPRINT := google/panther/panther:13/TQ1A.230105.001.A2/9325585:user/release-keys
+BUILD_FINGERPRINT := google/panther/panther:13/TQ1A.230205.002/9471150:user/release-keys
 
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
