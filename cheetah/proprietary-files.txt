@@ -269,7 +269,6 @@ system_ext/priv-app/SettingsGoogleFutureFaceEnroll/SettingsGoogleFutureFaceEnrol
 
 # HBM
 system_ext/lib64/libhbmsvmanager_jni.so
-system_ext/priv-app/HbmSVManager/HbmSVManager.apk
 
 # Hotword
 system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
