@@ -1094,7 +1094,6 @@ vendor/lib64/com.google.edgetpu_app_service-V2-ndk.so
 vendor/lib64/com.google.edgetpu_vendor_service-V2-ndk.so
 vendor/lib64/com.google.face.debug-V2-ndk.so
 vendor/lib64/com.google.hardware.biometrics.fingerprint.fingerprint-ext-V1-ndk.so
-vendor/lib64/com.google.hardware.pixel.display-V7-ndk.so
 vendor/lib64/com.google.input-V1-ndk.so
 vendor/lib64/egl/libGLES_mali.so
 vendor/lib64/fp_utils.so
