@@ -298,4 +298,7 @@
          Note: This should be only enabled on devices with high confidence on power measurement.
     -->
     <bool name="config_bg_current_drain_auto_restrict_abusive_apps">true</bool>
+
+    <!-- Fingerprint from stock ROM -->
+    <string name="config_stockFingerprint" translatable="false">google/cheetah/cheetah:13/TQ2A.230505.002/9891397:user/release-keys</string>
 </resources>
