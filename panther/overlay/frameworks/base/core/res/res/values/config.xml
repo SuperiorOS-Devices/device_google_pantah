@@ -317,5 +317,5 @@
     <bool name="config_bg_current_drain_auto_restrict_abusive_apps">true</bool>
 
     <!-- Fingerprint from stock ROM -->
-    <string name="config_stockFingerprint" translatable="false">google/panther/panther:13/TQ3A.230605.012/10204971:user/release-keys</string>
+    <string name="config_stockFingerprint" translatable="false">google/panther/panther:13/TQ3A.230705.001/10216780:user/release-keys</string>
 </resources>
