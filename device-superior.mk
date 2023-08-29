@@ -12,6 +12,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     device/google/pantah/the_experiences.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/the_experiences.xml
 
+# HBM
+PRODUCT_COPY_FILES += \
+    device/google/pantah/permissions/permissions_com.android.hbmsvmanager.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/permissions_com.android.hbmsvmanager.xml
+
 TARGET_PREBUILT_KERNEL := device/google/pantah-kernel/Image.lz4
 
 # Build necessary packages for vendor
