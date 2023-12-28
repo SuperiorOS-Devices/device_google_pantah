@@ -14,8 +14,13 @@ product/etc/firmware/music_detector.sound_model_2
 product/etc/firmware/music_detector.sound_model_tflite
 
 # Camera extensions
-product/app/PixelCameraServicesC10/PixelCameraServicesC10.apk;PRESIGNED
 product/etc/permissions/androidx.camera.extensions.impl.xml
+product/priv-app/PixelCameraServicesC10/PixelCameraServicesC10.apk;PRESIGNED
+
+# Felica
+product/etc/felica/common.cfg
+product/etc/felica/mfm.cfg
+product/etc/felica/mfs.cfg
 
 # Felica
 product/etc/felica/common.cfg
