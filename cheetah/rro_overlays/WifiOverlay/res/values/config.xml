@@ -140,12 +140,6 @@
     <!-- Indicate the driver doesn't support NL80211 Reg changed event -->
     <bool translatable="false" name="config_wifiDriverSupportedNl80211RegChangedEvent">false</bool>
 
-    <!-- Indicate whether the verbose logging is always on -->
-    <!-- 0: verbose logging controlled by user
-         1: verbose logging on by default for userdebug
-         2: verbose logging on by default for all builds -->
-    <integer translatable="false" name="config_wifiVerboseLoggingAlwaysOnLevel">1</integer>
-
     <!-- Enable aggregation of Wifi link layer radio stats from all radios -->
     <bool translatable="false" name="config_wifiLinkLayerAllRadiosStatsAggregationEnabled">true</bool>
 
@@ -165,4 +159,12 @@
          regulatory approval (for example, FCC pre-approval is required according to "594280 D01
          Software Configuration Control v02r01").-->
     <bool translatable="false" name ="config_wifiUpdateCountryCodeFromScanResultGeneric">true</bool>
+
+    <!-- Boolean indicating performing a partial initial scan is enabled -->
+    <bool translatable="false" name="config_wifiEnablePartialInitialScan">true</bool>
+
+    <!-- Configure the max number of new channels to add into the initial partial scan list per network.
+         If equals to 0, it means there's no limit on the max number of channels to include per network.-->
+    <integer translatable="false" name="config_wifiInitialPartialScanMaxNewChannelsPerNetwork">3</integer>
+
 </resources>
