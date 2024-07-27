@@ -34,4 +34,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 BUILD_FINGERPRINT := google/panther/panther:14/AP2A.240705.004/11875680:user/release-keys
 
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    persist.sys.pihooks.first_api_level=32
+
 $(call inherit-product, vendor/google/panther/panther-vendor.mk)
