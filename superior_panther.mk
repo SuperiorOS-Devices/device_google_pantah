@@ -30,9 +30,9 @@ SUPERIOR_OFFICIAL := true
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_PRODUCT=panther \
-    PRIVATE_BUILD_DESC="panther-user 14 AP2A.240805.005 12025142 release-keys"
+    PRIVATE_BUILD_DESC="panther-user 14 AP2A.240905.003 12231197 release-keys"
 
-BUILD_FINGERPRINT := google/panther/panther:14/AP2A.240805.005/12025142:user/release-keys
+BUILD_FINGERPRINT := google/panther/panther:14/AP2A.240905.003/12231197:user/release-keys
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.sys.pihooks.first_api_level=32
