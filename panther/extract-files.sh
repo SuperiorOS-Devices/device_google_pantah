@@ -16,6 +16,8 @@ if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
 
 ANDROID_ROOT="${MY_DIR}/../../../.."
 
+export TARGET_ENABLE_CHECKELF=true
+
 # If XML files don't have comments before the XML header, use this flag
 # Can still be used with broken XML files by using blob_fixup
 export TARGET_DISABLE_XML_FIXING=true
@@ -104,8 +106,38 @@ if [ -z "${ONLY_FIRMWARE}" ]; then
     VENDOR_TXT="${MY_DIR}/proprietary-files-vendor.txt"
     generate_prop_list_from_image "vendor.img" "${VENDOR_TXT}" VENDOR_SKIP_FILES
 
-    set_as_module "vendor/lib/libOpenCL.so" "${VENDOR_TXT}"
-    set_as_module "vendor/lib64/libOpenCL.so" "${VENDOR_TXT}"
+    # flp.default & gps.default have incorrect SONAME
+    # libExynosC2*Dec & libExynosC2*Enc depend on libacryl & libexynosv4l2, which are gnu makefile targets
+    set_disable_checkelf "vendor/lib/libExynosC2H263Dec.so" "${VENDOR_TXT}"
+    set_disable_checkelf "vendor/lib/libExynosC2H263Enc.so" "${VENDOR_TXT}"
+    set_disable_checkelf "vendor/lib/libExynosC2H264Dec.so" "${VENDOR_TXT}"
+    set_disable_checkelf "vendor/lib/libExynosC2H264Enc.so" "${VENDOR_TXT}"
+    set_disable_checkelf "vendor/lib/libExynosC2HevcDec.so" "${VENDOR_TXT}"
+    set_disable_checkelf "vendor/lib/libExynosC2HevcEnc.so" "${VENDOR_TXT}"
+    set_disable_checkelf "vendor/lib/libExynosC2Mpeg4Dec.so" "${VENDOR_TXT}"
+    set_disable_checkelf "vendor/lib/libExynosC2Mpeg4Enc.so" "${VENDOR_TXT}"
+    set_disable_checkelf "vendor/lib/libExynosC2Vp8Dec.so" "${VENDOR_TXT}"
+    set_disable_checkelf "vendor/lib/libExynosC2Vp8Enc.so" "${VENDOR_TXT}"
+    set_disable_checkelf "vendor/lib/libExynosC2Vp9Dec.so" "${VENDOR_TXT}"
+    set_disable_checkelf "vendor/lib/libExynosC2Vp9Enc.so" "${VENDOR_TXT}"
+    set_disable_checkelf "vendor/lib64/hw/flp.default.so" "${VENDOR_TXT}"
+    set_disable_checkelf "vendor/lib64/hw/gps.default.so" "${VENDOR_TXT}"
+    set_disable_checkelf "vendor/lib64/libExynosC2H263Dec.so" "${VENDOR_TXT}"
+    set_disable_checkelf "vendor/lib64/libExynosC2H263Enc.so" "${VENDOR_TXT}"
+    set_disable_checkelf "vendor/lib64/libExynosC2H264Dec.so" "${VENDOR_TXT}"
+    set_disable_checkelf "vendor/lib64/libExynosC2H264Enc.so" "${VENDOR_TXT}"
+    set_disable_checkelf "vendor/lib64/libExynosC2HevcDec.so" "${VENDOR_TXT}"
+    set_disable_checkelf "vendor/lib64/libExynosC2HevcEnc.so" "${VENDOR_TXT}"
+    set_disable_checkelf "vendor/lib64/libExynosC2Mpeg4Dec.so" "${VENDOR_TXT}"
+    set_disable_checkelf "vendor/lib64/libExynosC2Mpeg4Enc.so" "${VENDOR_TXT}"
+    set_disable_checkelf "vendor/lib64/libExynosC2Vp8Dec.so" "${VENDOR_TXT}"
+    set_disable_checkelf "vendor/lib64/libExynosC2Vp8Enc.so" "${VENDOR_TXT}"
+    set_disable_checkelf "vendor/lib64/libExynosC2Vp9Dec.so" "${VENDOR_TXT}"
+    set_disable_checkelf "vendor/lib64/libExynosC2Vp9Enc.so" "${VENDOR_TXT}"
+
+    set_module "vendor/lib/com.google.edgetpu_app_service-V3-ndk.so" "com.google.edgetpu_app_service-V3-ndk-vendor" "${VENDOR_TXT}"
+    set_module "vendor/lib64/com.google.edgetpu_app_service-V3-ndk.so" "com.google.edgetpu_app_service-V3-ndk-vendor" "${VENDOR_TXT}"
+    set_module "vendor/lib64/com.google.edgetpu_vendor_service-V2-ndk.so" "com.google.edgetpu_vendor_service-V2-ndk-vendor" "${VENDOR_TXT}"
 
     extract "${MY_DIR}/proprietary-files-vendor.txt" "${SRC}" "${KANG}" --section "${SECTION}"
 fi
